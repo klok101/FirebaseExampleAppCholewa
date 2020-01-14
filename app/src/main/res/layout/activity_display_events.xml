@@ -10,6 +10,7 @@
         android:layout_width="65dp"
         android:layout_height="65dp"
         android:onClick="backToHome"
+        android:tint="#000000"
         app:srcCompat="@android:drawable/ic_menu_revert" />
 
 

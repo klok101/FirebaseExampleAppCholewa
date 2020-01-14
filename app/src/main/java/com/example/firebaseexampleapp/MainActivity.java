@@ -103,4 +103,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void chooseTime(View v){
+
+        Intent intent = new Intent(MainActivity.this, TimePickActivity.class);
+        intent.putExtra("events", dbHelper.getEventsArrayList());
+        startActivity(intent);
+
+    }
+
 }
