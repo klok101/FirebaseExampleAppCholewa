@@ -47,6 +47,22 @@ public class DisplayEventsActivity extends AppCompatActivity {
         CustomAdapter customAdapter = new CustomAdapter();
         allEventsListView.setAdapter(customAdapter);
 
+        // Referenced for syntax: https://www.youtube.com/watch?v=XyxT8IQoZkc
+        // Create a setOnItemClickListener for the listView to find out which element they clicked on
+
+        allEventsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                Event event = myEvents.get(i);
+
+                // start an intent to load the page to edit this element that has been clicked on
+                Intent intent = new Intent(DisplayEventsActivity.this, EditEventActivity.class);
+                intent.putExtra("event", event);
+                startActivity(intent);
+            }
+        });
+
     }
 
 
