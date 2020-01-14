@@ -7,8 +7,8 @@
     tools:context=".DisplayEventsActivity">
 
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
         android:onClick="backToHome"
         app:srcCompat="@android:drawable/ic_menu_revert" />
 
